@@ -1,200 +1,254 @@
-body{
-    background: linear-gradient(135deg, #FF6B6B, );
+:root {
+    --text-align-left: 3%;
 }
-.resume-page{
+
+.raleway-font-bold {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.raleway-font-less-bold {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.mukta-font-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.resume-page {
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: row;
 }
-.profile{
+.profile {
     border: none;
-    position: absolute;
+    position: relative;
     width: 35%;
-    gap:0;
+    gap: 0;
     background-color: rgb(245, 238, 238);
     border-radius: clamp(1rem, 1vw, 2rem);
     left: 5%;
-    overflow-y:visible;
+    overflow-y: visible;
     min-height: 50vh;
-    top:15%;
+    top: 5%;
 }
-.main-resume{
+.main-resume {
     border: none;
-    position: absolute;
+    position: relative;
     width: 50%;
-    gap:0;
+    gap: 0;
     background-color: rgb(245, 238, 238);
     border-radius: clamp(1rem, 1vw, 2rem);
     left: 45%;
-    overflow-y:visible;
+    overflow-y: visible;
     min-height: 90vh;
+    top: 5%;
     margin: 0;
-    top:15%;
     padding: 0;
     break-after: page;
 }
-.photo-container{
-    width:fit-content;
+.photo-container {
+    width: fit-content;
     position: relative;
     border: 10px;
     left: 25%;
-    top:20%;
+    top: 20%;
     border-radius: 50%;
     gap: 10px;
     padding: 10px;
 }
-.photo{
+.photo {
     width: 300px;
     height: 300px;
-    border: 5px solid #FFA07A;
+    border: 5px solid #ffa07a;
     border-radius: 50%;
     object-fit: cover;
 }
-.general-heading{
+.general-heading {
     width: 85%;
-    min-height:3vh;
-    font-size: clamp(1rem, 2vw, 2rem);
+    min-height: 3vh;
     left: var(--text-align-left);
     position: relative;
-    color:#C0392B;
+    color: #c0392b;
     border: none;
+    margin: 0;
+    margin-top: 10px;
 }
-.profile p{
+.profile p {
     position: relative;
     left: var(--text-align-left);
     width: 85%;
+    margin: 0;
 }
-.paragraph-text{
-    font-size: 1.3rem;
+h1,
+h2,
+h3,
+h4 {
+    font-size: 1.1rem;
 }
-h1, h2, h3, h4{
-    font-size: 1.7rem;
-}
-ul{
+ul {
     position: relative;
-    left:var(--text-align-left);
+    left: var(--text-align-left);
     width: 85%;
     margin: 0;
     padding: 0;
 }
-.name{
+.name {
     width: fit-content;
     position: relative;
-    font-size: 3rem;
+    font-size: 2.5rem;
     left: var(--text-align-left);
-    color: #C0392B;
+    color: #c0392b;
+    margin-bottom: 10px;
 }
-.job-title{
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    text-align: center;
+}
+.white-text {
+    color: rgb(205, 198, 198);
+    user-select: none;
+}
+.job-title {
     color: black;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
-.school-heading{
+.education {
+    color: black;
+    font-size: 1.7rem;
+    border-bottom: 3px solid #ffa07a;
+}
+.school-heading {
     font-size: 1.3rem;
     text-align: left;
 }
-.project-heading, .skills-heading, .education{
-    text-align: left;
-    color:black;
-    border-bottom: 3px solid #FFA07A;
-}
-.project-list-heading{
-    font-size: clamp(1rem, 1vw, 2rem);
-}
-.work-experience-heading{
+.project-heading {
     font-size: 1.5rem;
     text-align: left;
-    color:black;
-    border-bottom: 3px solid #FFA07A;
+    color: black;
+    border-bottom: 3px solid #ffa07a;
 }
-.education-list, .project-features-list, .work-experience-list{
-    list-style:disc;
-    padding-left: 10px;   
+.work-experience-heading {
+    font-size: 1.5rem;
+    text-align: left;
+    color: black;
+    border-bottom: 3px solid #ffa07a;
 }
-.skill-list{
-    list-style:disc;
+.education-list,
+.project-features-list,
+.work-experience-list {
+    list-style: disc;
+    padding-left: 10px;
 }
-.contact-list, .hobbies-list, .project-list{
+.contact-list,
+.hobbies-list,
+.project-list {
     list-style: none;
 }
-
-.list-item{
+.skill-bar {
+    position: absolute;
+    left: 3%;
+    width: 80%;
+    height: 20px;
+    background-color: rgb(205, 198, 198);
+    border-radius: 10px;
+}
+.skill-percentage {
     position: relative;
+    left: 86%;
+}
+.skill-wrapper {
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
-    flex-direction: row;
-    justify-content: space-evenly;
-    min-width: 20vw;
-    min-height: 10vh;
-    gap:1vw;
 }
-.list-item .skill-name{
-    font-size: clamp(1rem, 1vw, 2rem);
+.skill-text {
+    position: relative;
+    left: 3%;
+    width: fit-content;
+    margin-bottom: 0;
 }
-.list-item .skill-percentage{
-    font-size: clamp(1rem, 1vw, 2rem);
-}
-.skill-bar{
-    
-    left:15%;
-    width:60%;
-    height: 2vh;
-    background-color: rgb(205, 198, 198);
-    border-radius: clamp(1rem, 1vw, 1.5rem);
+.skill-rating {
+    height: 20px;
+    background: linear-gradient(90deg, #ff6b6b, #ffa07a);
+    border-radius: 10px;
 }
 
-.skill-rating{
-    height: 2vh;
-    background: linear-gradient(90deg, #FF6B6B, #FFA07A);  
-    border-radius: clamp(1rem, 1vw, 1.5rem); 
-}
-/* #python-skill{
-    position: relative;
-    left:3%;
-}
-#cpp-skill{
-    position: relative;
-    left:5%;
-}
-#html-skill{
-    position: relative;
-    left:4%;
-}
-#css-skill{
-    position: relative;
-    left:5%;
-}
-#js-skill{
-    position: relative;
-    left:1.5%;
-} */
-#html-skill-bar .skill-rating{
-    width: 80%; 
-}
-#css-skill-bar .skill-rating{
-    width: 80%; 
-}
-#js-skill-bar .skill-rating{
-    width: 70%;
-}
-#python-skill-bar .skill-rating{
+#html-skill-bar .skill-rating {
     width: 80%;
 }
-#cpp-skill-bar .skill-rating{
+#css-skill-bar .skill-rating {
+    width: 80%;
+}
+#js-skill-bar .skill-rating {
+    width: 70%;
+}
+#python-skill-bar .skill-rating {
+    width: 80%;
+}
+#cpp-skill-bar .skill-rating {
     width: 60%;
 }
-/* #html-skill-percentage{
-    left: 67%;
+#react-skill-bar .skill-rating {
+    width: 70%;
 }
-#css-skill-percentage{
-    left: 68.5%;
+.white-text {
+    color: rgb(245, 238, 238);
 }
-#js-skill-percentage{
-    left: 64.8%;
+.double-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
-#cpp-skill-percentage{
-    left: 68.5%;
+@media print {
+    body {
+        background: linear-gradient(135deg, #ff6b6b, #ffa07a) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    .photo-container {
+        left: 10%;
+    }
+    .profile {
+        top: 2%;
+    }
+    .main-resume {
+        top: 2%;
+    }
+    .profile p {
+        width: 95%;
+    }
+    .photo {
+        width: 200px;
+        height: 200px;
+        border: 5px solid #ffa07a;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .education {
+        color: black;
+        font-size: 1.3rem;
+        border-bottom: 3px solid #ffa07a;
+        padding-top: 10px;
+    }
+    .project-heading {
+        font-size: 1.3rem;
+        text-align: left;
+        color: black;
+        border-bottom: 3px solid #ffa07a;
+    }
+    .work-experience-heading {
+        font-size: 1.3rem;
+        text-align: left;
+        color: black;
+        border-bottom: 3px solid #ffa07a;
+    }
 }
-#python-skill-percentage{
-    left: 66.5%;
-} */
-

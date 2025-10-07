@@ -1,63 +1,64 @@
-:root{
+:root {
     --border-radius: clamp(1rem, 2vw, 2rem);
     --navbar-items-font-size: clamp(1.15rem, 2.3vw, 3rem);
     --card-button-top: 5%;
     --default-white: rgb(230, 230, 224);
     --default-hover: rgb(255, 87, 34);
     --text-align-left: 3%;
-}   
-*{
+}
+* {
     box-sizing: border-box;
 }
 /* All fonts used */
-.montserrat-font-bold{
+.montserrat-font-bold {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     font-optical-sizing: auto;
     font-style: normal;
 }
-.raleway-font-bold{
+.raleway-font-bold {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-optical-sizing: auto;
     font-style: normal;
 }
-.Mukta-font-regular{
+.Mukta-font-regular {
     font-family: "Mukta", sans-serif;
     font-weight: 300;
     font-optical-sizing: auto;
     font-style: normal;
 }
 /* navbar styling */
-.navbar{
+.navbar {
+    display: flex;
     background-color: rgb(77, 75, 75);
-    width:100%;
+    width: 100%;
     border-radius: var(--border-radius);
 }
-.navbar-items{
+.navbar-items {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
     height: 9vh;
 }
-.navbar-items a{
+.navbar-items a {
     align-self: center;
     border: none;
-    cursor:pointer;
+    cursor: pointer;
     color: var(--default-white);
     font-size: var(--navbar-items-font-size);
     transition: color 0.15s, text-decoration 0.15s;
     text-decoration: none;
 }
-.navbar-items a:hover{
+.navbar-items a:hover {
     color: var(--default-hover);
     text-decoration: underline;
 }
-.row{
-    width:100%;
+.row {
+    width: 100%;
     position: relative;
-    display:flex;
+    display: flex;
     justify-content: space-around;
     align-items: center;
     align-content: center;
@@ -66,21 +67,21 @@
     will-change: transform;
     margin-top: 1vw;
 }
-.button-row{
-    display:flex;
+.button-row {
+    display: flex;
     justify-content: space-around;
     width: 80%;
 }
-.container{
-    display:flex;
+.container {
+    display: flex;
     align-items: center;
     position: relative;
     flex-direction: row;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: var(--border-radius);
     transition: opacity 0.3s ease-in-out;
 }
-.card{
+.card {
     display: flex;
     position: relative;
     justify-content: center;
@@ -93,15 +94,15 @@
     min-height: 20vh;
     margin: clamp(1rem, 1.5vw, 2rem);
     border-radius: var(--border-radius);
-    box-shadow: 0.4vw 0.3vw 1.2vw rgba(0,0,0,0.7);
+    box-shadow: 0.4vw 0.3vw 1.2vw rgba(0, 0, 0, 0.7);
     transition: transform 0.15s;
 }
-.card h1{
+.card h1 {
     font-size: clamp(1rem, 2vw, 7rem);
     max-width: 80%;
     text-align: center;
 }
-.card p{
+.card p {
     overflow: auto;
     text-overflow: ellipsis;
     display: block;
@@ -112,15 +113,15 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
-.card::-webkit-scrollbar{
-    display:none;
+.card::-webkit-scrollbar {
+    display: none;
     width: 0px;
     height: 0px;
 }
-.container button{
+.container button {
     font-size: clamp(0.5rem, 1vw, 1.25rem);
 }
-.edit-button{
+.edit-button {
     position: absolute;
     top: var(--card-button-top);
     border: none;
@@ -129,34 +130,34 @@
     transition: transform 0.15s;
     color: #ffc107;
 }
-.edit-button:hover{
+.edit-button:hover {
     transform: scale(1.2);
 }
-.delete-button{
+.delete-button {
     position: absolute;
-    top:calc(var(--card-button-top)*3.2);
+    top: calc(var(--card-button-top) * 3.2);
     border: none;
     background: none;
     cursor: pointer;
     transition: transform 0.15s;
-    color:#ff4d4d;
+    color: #ff4d4d;
 }
-.delete-button:hover{
+.delete-button:hover {
     transform: scale(1.2);
 }
-.toggle-status-button{
+.toggle-status-button {
     position: absolute;
-    top:calc(var(--card-button-top)*5);
+    top: calc(var(--card-button-top) * 5);
     border: none;
     background: none;
     cursor: pointer;
     transition: transform 0.15s;
-    color:#28a745;
+    color: #28a745;
 }
-.toggle-status-button:hover{
+.toggle-status-button:hover {
     transform: scale(1.2);
 }
-.undo-button{
+.undo-button {
     border: none;
     background: none;
     cursor: pointer;
@@ -164,10 +165,10 @@
     color: rgb(40, 40, 217);
     font-size: clamp(1rem, 2vw, 2rem);
 }
-.undo-button:hover{
+.undo-button:hover {
     transform: scale(1.2);
 }
-.save-button{
+.save-button {
     border: none;
     background: none;
     cursor: pointer;
@@ -175,61 +176,62 @@
     color: rgb(38, 33, 33);
     font-size: clamp(1rem, 2vw, 2rem);
 }
-.save-button:hover{
+.save-button:hover {
     transform: scale(1.2);
 }
-.task-completed{
-    background-color: #4CAF50;
+.task-completed {
+    background-color: #4caf50;
     transition: background-color 0.15s ease-in-out;
 }
-.task-completed:hover{
+.task-completed:hover {
     background-color: #0ee115;
 }
-.task-pending{
-    background-color: #E74C3C;
+.task-pending {
+    background-color: #e74c3c;
     transition: background-color 0.15s ease-in-out;
 }
-.task-pending:hover{
+.task-pending:hover {
     background-color: #ca2311;
 }
-.hidden{
+.hidden {
     display: none;
 }
-.add-task-bar{
+.add-task-bar {
     display: flex;
     flex-direction: row;
     justify-content: center;
     background-color: rgb(49, 47, 47);
     align-content: center;
-    width:100%;
-    height:auto;
+    width: 100%;
+    height: auto;
     transition: background-color 0.15s;
     border-radius: var(--border-radius);
 }
 
-.add-task-bar h1{
+.add-task-bar h1 {
     max-width: 80%;
     text-align: center;
     color: var(--default-white);
     font-size: var(--navbar-items-font-size);
     user-select: none;
 }
-.add-task-bar i{
+.add-task-bar i {
     font-size: clamp(1rem, 3vw, 4rem);
-    color:  #28a745;
+    color: #28a745;
     align-self: center;
     padding-left: 1vw;
 }
-.add-task-bar:hover{
+.add-task-bar:hover {
     background-color: rgb(77, 75, 75);
 }
-.add-task-bar:active{
+.add-task-bar:active {
     background-color: rgb(39, 38, 38);
 }
-.add-task-bar:active::after{
-    background-color:  rgb(49, 47, 47);
+.add-task-bar:active::after {
+    background-color: rgb(49, 47, 47);
 }
-.task-completed [contenteditable="true"], .task-pending [contenteditable="true"]{
+.task-completed [contenteditable="true"],
+.task-pending [contenteditable="true"] {
     border: none;
     background-color: #dbeafe;
     width: 100%;
@@ -238,64 +240,68 @@
     border-radius: var(--border-radius);
     transition: background-color 0.15s;
 }
-.task-completed [contenteditable="true"]:hover{
+.task-completed [contenteditable="true"]:hover {
     background-color: var(--default-hover);
 }
-.task-pending [contenteditable="true"]:hover{
+.task-pending [contenteditable="true"]:hover {
     background-color: #66a7fc;
 }
-.task-completed [contenteditable="true"]:focus, .task-pending [contenteditable="true"]:focus{
+.task-completed [contenteditable="true"]:focus,
+.task-pending [contenteditable="true"]:focus {
     background-color: var(--default-white);
 }
-.task-removing{
+.task-removing {
     opacity: 0;
     transition: opacity 0.3s ease-out;
 }
-.main-page{
+.main-page {
     transition: opacity 0.15s ease-in-out;
 }
-.about-page{
+.about-page {
     display: flex;
-    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
 }
-.slide-left-to-right{
+.slide-left-to-right {
     animation: slide-left-to-right 0.4s ease-out forwards;
 }
-.slide-right-to-left{
+.slide-right-to-left {
     animation: slide-right-to-left 0.4s ease-out forwards;
 }
-.heading-window{
+.heading-window {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-body{
+body {
     background-color: rgb(49, 47, 47);
     overflow-x: hidden;
     transition: background-color 0.15s ease-out;
 }
-html{
+html {
     overflow-x: hidden;
 }
-@media (max-width: 768px){
-    .card{
-        width:30vw;
+@media (max-width: 768px) {
+    .card {
+        width: 30vw;
     }
 }
 @keyframes slide-left-to-right {
-    0%{
-        transform: translateX(-30%)
+    0% {
+        transform: translateX(-30%);
     }
-    100%{
+    100% {
         transform: translateX(0%);
     }
 }
-@keyframes slide-right-to-left{
-    0%{
-        transform: translateX(30%)
+@keyframes slide-right-to-left {
+    0% {
+        transform: translateX(30%);
     }
-    100%{
-        transform: translateX(0%)
+    100% {
+        transform: translateX(0%);
     }
 }
