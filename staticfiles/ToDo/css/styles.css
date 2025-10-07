@@ -259,9 +259,12 @@
 }
 .about-page {
     display: flex;
+    overflow: hidden;
     width: 100%;
+    padding: 3rem;
     height: auto;
-    align-items: center;
+    gap: 2rem;
+    align-items: flex-start;
     justify-content: center;
 }
 .slide-left-to-right {
